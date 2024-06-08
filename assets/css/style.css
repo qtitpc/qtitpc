@@ -1,0 +1,298 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    list-style: none
+}
+
+:root {
+    --bg-color: #222327;
+    --text-color: #fff;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+.container {
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background-color 0.3s, backdrop-filter 0.3s;
+}
+.header.scrolled {
+    background-color:var(--bg-color);
+    backdrop-filter: blur(30px);
+}
+.brand a{
+    font-size:20px;
+    font-weight: bolder;
+    color:var(--text-color);
+}
+.navm{
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 9%;
+}
+.nav{
+    display:flex;
+    background: var(--bg-color);
+
+    margin-left: auto;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+nav ul li {
+    display: flex;
+}
+nav ul li a{
+    color:white;
+    margin-left: 40px;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: all .55s ease;
+}
+nav ul li a:hover{
+    border-bottom: 2px solid white;
+}
+#menu-icon{
+    color:white;
+    font-size: 40px;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+.intro {
+    height: 130vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+
+.image-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-intro img {
+    margin-bottom: -30vh;
+    max-width: 80%;
+    opacity: 0;
+    animation: fadein 2s infinite;
+}
+.image-stroke {
+    position: absolute;
+
+    align-items: center;
+    justify-content: center;
+
+    max-width: 80%;
+    animation: fadein-1 2s forwards;
+    
+}
+.image-intro img:last-child {
+    margin-bottom: 0;
+}
+.image-intro img:nth-child(1) {
+    animation-delay: 0.9s;
+}
+
+.image-intro img:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.image-intro img:nth-child(3) {
+    animation-delay: 0s;
+}
+
+@keyframes fadein {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+@keyframes fadein-1 {
+    to {
+        opacity: 1;
+    }
+}
+.image-qtung {
+    position: absolute;
+
+    top:15%;
+
+    left: 30%;
+
+    align-items: center;
+    justify-content: center;
+
+    max-width: 35%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.text-primary{
+    color:#A7E6FF;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.about-content {
+    display: flex;
+    align-items: flex-start;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.about-text {
+    flex: 1;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-image img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 20px; 
+    
+}
+.about-text p{
+    margin-top: 1rem;
+}
+.about-text h4{
+    margin-top: 1rem;
+}
+.infos-myself{
+    margin-top: 2rem;
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-text {
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .about-image img {
+        margin-top: 60px;
+        width: 300px;
+        height: 300px;
+        border-radius: 20px;
+        
+    }
+}
+
+.infos-myself{
+    text-align: left;
+}
+.end{
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+}
+.end p{
+    font-size:0.8rem;
+    margin-bottom: 2rem;
+}
+
+.social-end a{
+    size: 2rem;
+    color: #fff;
+    opacity: 0.3;
+    transition:opacity 3s ease;
+
+}
+.social-end a:hover {
+    opacity: 1;
+}
+.about-text h1{
+    font-size: 3rem;
+}
+.about-text p{
+    font-size: 2rem;
+}
+.social-end a:not(:last-child) {
+    margin-right: 1rem;
+}
+.end p {
+    margin-top: 1rem;}

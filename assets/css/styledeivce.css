@@ -1,0 +1,80 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    list-style: none
+}
+
+:root {
+    --bg-color: #222327;
+    --text-color: #fff;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+.container {
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background-color 0.3s, backdrop-filter 0.3s;
+}
+.header.scrolled {
+    background-color:var(--bg-color);
+    backdrop-filter: blur(30px);
+}
+.brand a{
+    font-size:20px;
+    font-weight: bolder;
+    color:var(--text-color);
+}
+.navm{
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 9%;
+}
+.nav{
+    display:flex;
+    background: var(--bg-color);
+
+    margin-left: auto;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+nav ul li {
+    display: flex;
+}
+nav ul li a{
+    color:white;
+    margin-left: 40px;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: all .55s ease;
+}
+nav ul li a:hover{
+    border-bottom: 2px solid white;
+}
